@@ -31,7 +31,7 @@ export default function BeforeAfter({
         </>
       )}
       <div className={cn('mb-10 flex flex-col gap-5 sm:flex-row', className)}>
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <p className="!mt-0 text-center">Before</p>
           <Image
             alt=""
@@ -41,7 +41,7 @@ export default function BeforeAfter({
             style={{ height: 'auto', width: '100%' }}
           />
         </div>
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <p className="!mt-0 text-center">After</p>
           <Image
             alt=""

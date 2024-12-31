@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="text-gray-400"></div>
+      <div className="text-gray-400 md:w-[300px]"></div>
     </>
   )
 }

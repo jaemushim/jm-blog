@@ -14,13 +14,15 @@ date: 2024-12-31
 <BeforeAfter title="마이데이터 선택 값 새로고침시에도 유지 (홈 검색 및 필터에도 똑같이 적용)" description={`교차분석에서 성향 클릭 -> 의사결정 클릭 -> 새로고침 시 혹은 링크 공유시 선택된 값 유지 \n url 에 필터값 적용 ~/cross-analysis?mdatCate=BASIC&mdatNo=2`} beforeSrc="/url-parameter-before.gif" afterSrc="/url-parameter-after.gif" />
 
 • 공통 에러 처리 <br /> 모든 api 응답 에러시 Toast 팝업
-<Image
-    alt=""
-    src={"/images/api-common-error.png"}
-    width={1000}
-    height={0}
-    style={{ height: 'auto', width: '50%', marginBottom:'40px' }}
-/>
+<div className="md:w-1/2">
+    <Image
+        alt=""
+        src={"/images/api-common-error.png"}
+        width={1000}
+        height={0}
+        style={{ height: 'auto', width: '100%', marginBottom:'40px' }}
+    />
+</div>
 
 <BeforeAfter title="나의 아젠다 삭제 후 페이지 새로고침 제거, api 응답 대기까지 Toast 로딩처리" beforeSrc="/delete-refresh-before.gif" afterSrc="/delete-refresh-after.gif" />
 <BeforeAfter title="나의아젠다 -> 아젠다 상세페이지 이동시 api 호출 후 응답완료되어야 페이지 이동 (blocking time 1초 이상) 제거" beforeSrc="/agenda-detail-blocking-before.gif" afterSrc="/agenda-detail-blocking-after.gif" />
