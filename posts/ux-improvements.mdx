@@ -1,0 +1,50 @@
+---
+title: 사용성 및 성능 개선
+description: 아젠다북 웹 프론트엔드 프로젝트를 리뉴얼하며 이전과 비교하여 개선된 부분을 정리
+date: 2024-12-31
+---
+
+<p />
+
+<p style={{marginBottom:'-48px',textAlign:'right'}} className="text-xs text-gray-400">By Lighthouse</p>
+<BeforeAfter title="전체적인 성능 향상" description="현재 개발서버기준 측정결과. 운영서버로 최적화 배포시 80점대 예상 (네이버 홈페이지 60점대)" beforeSrc="/images/before-performance.png" afterSrc="/images/after-performance.png" />
+
+<BeforeAfter title="홈 로딩 제거" beforeSrc="/home-loading-before.gif" afterSrc="/home-loading-after.gif" />
+<BeforeAfter title="홈 스크롤시 로딩 Skeleton 적용" beforeSrc="/home-scroll-before.gif" afterSrc="/home-scroll-after.gif" />
+<BeforeAfter title="마이데이터 선택 값 새로고침시에도 유지 (홈 검색 및 필터에도 똑같이 적용)" description={`교차분석에서 성향 클릭 -> 의사결정 클릭 -> 새로고침 시 혹은 링크 공유시 선택된 값 유지 \n url 에 필터값 적용 ~/cross-analysis?mdatCate=BASIC&mdatNo=2`} beforeSrc="/url-parameter-before.gif" afterSrc="/url-parameter-after.gif" />
+
+• 공통 에러 처리 <br /> 모든 api 응답 에러시 Toast 팝업
+<Image
+    alt=""
+    src={"/images/api-common-error.png"}
+    width={1000}
+    height={0}
+    style={{ height: 'auto', width: '50%', marginBottom:'40px' }}
+/>
+
+<BeforeAfter title="나의 아젠다 삭제 후 페이지 새로고침 제거, api 응답 대기까지 Toast 로딩처리" beforeSrc="/delete-refresh-before.gif" afterSrc="/delete-refresh-after.gif" />
+<BeforeAfter title="나의아젠다 -> 아젠다 상세페이지 이동시 api 호출 후 응답완료되어야 페이지 이동 (blocking time 1초 이상) 제거" beforeSrc="/agenda-detail-blocking-before.gif" afterSrc="/agenda-detail-blocking-after.gif" />
+<BeforeAfter title="교차분석 페이지 진입시 UI 요소 캐싱 안됨, CLS값 개선" beforeSrc="/cross-not-caching-before.gif" afterSrc="/cross-not-caching-after.gif" className="mb-0" />
+<p className="text-sm !mt-3 !mb-2">※ CLS(Cumulative Layout Shift) 값이란? : 페이지 로드 중 예상치 못한 시각적 콘텐츠 이동의 총량을 측정하는 지표로, 사용자 경험에 영향을 미치는 시각적 안정성을 평가합니다.</p>  
+
+<div className="flex gap-5">
+    <Image
+        alt=""
+        src={"/images/before-CLS.png"}
+        width={1000}
+        height={0}
+        style={{ height: 'auto', width: '50%', marginBottom:'40px' }}
+    />
+    <Image
+        alt=""
+        src={"/images/after-CLS.png"}
+        width={900}
+        height={0}
+        style={{ height: '90%', width: '50%',marginTop:'4px', marginBottom:'40px' }}
+    />
+</div>
+
+<BeforeAfter title="분석시 Skeleton 로딩 추가" beforeSrc="/analysis-loading-before.gif" afterSrc="/analysis-loading-after.gif" className="mb-0" />
+<BeforeAfter title="마이데이터 이동시 테이블 로딩 추가" beforeSrc="/table-loading-before.gif" afterSrc="/table-loading-after.gif" className="mb-0" />
+<BeforeAfter title="트래킹 생성 팝업 및 인터렉션 시 불필요한 렌더링 제거 + 클릭후 반응속도 향상" beforeSrc="/tracking-rendering-before.gif" afterSrc="/tracking-rendering-after.gif" className="mb-0" />
+<BeforeAfter title="분석 실행 중 이탈시 게이지 100% 채워지는 현상 개선" beforeSrc="/analysis-exit-before.gif" afterSrc="/analysis-exit-after.gif" className="mb-0" />
