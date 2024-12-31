@@ -7,17 +7,15 @@ import type { Metadata } from 'next'
 import './global.css'
 
 const meta = {
-  title: 'Hunter Chang - Website',
-  description:
-    'Sleep deprived father. FE Engineer in China. Lover of Ramen and Kpop',
+  title: 'Jaemu Shim - Website',
+  description: '심재무의 블로그',
   image: `${WEBSITE_HOST_URL}/og-preview.jpg`,
 }
-
 
 export const metadata: Metadata = {
   title: {
     default: meta.title,
-    template: '%s | Hunter Chang',
+    template: '%s | Jaemu Shim blog',
   },
   description: meta.description,
   openGraph: {
@@ -50,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" >
+    <html lang="en">
       <body>
         <ThemeProvider attribute="class" defaultTheme="light">
           <header className="py-4">
