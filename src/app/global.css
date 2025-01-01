@@ -6,7 +6,7 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-    --title:#434a53;
+    --title: #434a53;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
 
@@ -39,7 +39,7 @@
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-    --title:white;
+    --title: white;
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -107,7 +107,7 @@
 }
 
 .nav-link {
-  @apply rounded-md px-6 py-2 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none;
+  @apply rounded-md px-6 py-2;
 }
 
 /* Post styles */
@@ -227,10 +227,30 @@ input[type='email'] {
   @apply mt-0 rounded-t-none border-t-0;
 }
 
-.prose ul li ul  {
+.prose ul li ul {
   list-style-type: circle;
 }
 
-.prose :where(ul > li):not(:where([class~="not-prose"],[class~="not-prose"] *))::marker {
-  color:#333;
+.prose
+  :where(ul > li):not(
+    :where([class~='not-prose'], [class~='not-prose'] *)
+  )::marker {
+  color: #333;
+}
+
+.prose a {
+  font-size: 12px;
+}
+
+em {
+  font-style: normal;
+  @apply text-destructive;
+}
+
+.pc {
+  @apply hidden md:block;
+}
+
+.mobile {
+  @apply md:hidden;
 }

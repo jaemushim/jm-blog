@@ -1,0 +1,29 @@
+---
+title: Sentry로 에러 추적하기 - 사용자 경험 보호를 위한 실시간 모니터링
+description: 애플리케이션의 안정성을 유지하고 사용자 경험을 보호하기 위해, 실시간 에러 감지와 자동화된 에러 수집 도구인 Sentry를 활용하여 발견 가능한 에러를 신속히 추적하고 대응하는 방안을 살펴봅니다.
+date: 2025-1-1
+---
+
+실시간 에러 감지와 자동화된 에러 수집 도구를 활용하여 웹 프론트엔드에서 발견 가능한 에러를 신속히 추적하고 대응하여 사용자의 경험을 보호할 수 있습니다.
+
+
+<div style={{maxWidth:'80%',margin:'32px auto 0'}}>![image.png](/images/error-detect.png)</div>
+
+## Sentry &nbsp;&nbsp;<a target="_blank" href="https://try.sentry-demo.com/organizations/fitting-liger/issues/?original_referrer=https%3A%2F%2Fwww.google.com%2F&client=%7B%22extraQueryString%22%3A%22original_referrer%3Dhttps%253A%252F%252Fwww.google.com%252F%22%7D#welcome">데모 보기</a>
+
+Sentry는 애플리케이션에서 발생하는 문제를 실시간 감지하여 로그 취합 및 분석하는 도구이자 모니터링 플랫폼입니다. 로그에 대해 다양한 정보를 제공하고 이벤트별, 타임라인으로 얼마나 많은 이벤트가 발생하는지 알 수 있고 
+설정에 따라 알림을 받을 수 있습니다. 그리고 로그를 수집하는데서 그치지 않고 발생한 로그들을 시각화 도구로 쉽게 분석할 수 있도록 도와주며 다양한 플랫폼을 지원합니다.  
+
+    - Sentry는 실시간으로 에러를 감지하고, 언제 어디서 어떤 문제가 발생했는지 _즉시 개발자에게 알림을 제공(이메일 등)_
+    - _발생한 에러의 디바이스, 브라우저, 환경 정보를 함께 제공_ 하여 디버깅 시간을 줄임
+
+## Sentry 에러감지 범위
+<div className="mobile">
+    - 발견가능: 클라이언트에서 발생하는 JavaScript 런타임 에러 사용자 환경(디바이스, 브라우저 설정)으로 인한 이슈, 네트워크 요청 실패와 같은 API 에러, UI 렌더링 오류 등..
+    - 불가: 개발자 실수로인한 비지니스 로직구현 오류, 서버측 오류
+</div>
+<div className="pc">![image.png](/images/sentry-detect.png)</div>
+
+
+## Sentry 도입 후 기대효과
+사용자에게 발생되는 에러를 빠르게 탐지하고 Sentry에서 제공하는 분석 로그를 활용하여 디버깅 시간을 줄이고 서비스 안정성 향상으로 이어지길 기대합니다.
