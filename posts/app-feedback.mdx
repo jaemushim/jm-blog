@@ -8,7 +8,7 @@ date: 2025-1-2
 
 ## UX 관련
 
-- 아젠다북 앱 진입시 로딩이 매끄러웠으면 좋겠습니다.  
+- **아젠다북 앱 진입시 로딩이 매끄러웠으면 좋겠습니다.**
     <p className="font-semibold text-center">아젠다북</p>
     <p>현재는 흰 화면 -> 흰화면 + 로딩화면 -> 리스트 로딩화면 -> 완료</p>
     <div className="flex flex-col md:flex-row gap-5 md:gap-10">
@@ -22,7 +22,7 @@ date: 2025-1-2
 
 <br />
 <br />
-- 메뉴이동시 최초 로딩은 될수있지만 메뉴 재 진입시 로딩 없었으면 합니다.
+- **메뉴이동시 최초 로딩은 될수있지만 메뉴 재 진입시 로딩 없었으면 합니다.**
 <div className="flex flex-col md:flex-row gap-5 md:gap-10">
     <div>
         <p className="font-semibold text-center">아젠다북</p>
@@ -33,6 +33,20 @@ date: 2025-1-2
         <img src="/app-feedback/house-1.gif" alt="" />
     </div>
 </div>
+
+<br />
+- **상세페이지 이동시 로딩 부드럽게 + 로딩시간 단축**   
+현재 로딩이 2단계(흰화면 + 로딩 => 파란배경 + 로딩) 으로 이루어져있는데 이 단계를 하나로 축소하고,   
+또 로딩처리가 댓글까지 포함된거같습니다. 상세페이지 진입후 첫화면은 빠르게 보여주고 당근마켓처럼 댓글은 이후에 데이터를 호출하면 로딩이 단축될거 같습니다.
+    <p className="font-semibold text-center">아젠다북</p>
+    <div className="flex flex-col md:flex-row gap-5 md:gap-10">
+        <div><img src="/app-feedback/photo-2.jpeg" alt="" /></div>
+        <div><img src="/app-feedback/photo-1.jpeg" alt="" /></div>
+        <div><img src="/app-feedback/photo-3.jpeg" alt="" /></div>
+    </div>
+    <br />
+    <p className="font-semibold text-center">당근마켓</p>
+     <div><img src="/app-feedback/detail.gif" className="!mx-auto" alt="" /></div>
 
 ## Code Push 기능 도입 고려
 ℹ️ Code Push란? 각 플랫폼의 앱스토어 리뷰 과정 없이 앱의 업데이트를 반영할 수 있는 서비스입니다. 앱의 네이티브 코드가 아닌, Dart 코드 및 정적 리소스만의 변경 사항을 빠르게 배포할 수 있습니다.
