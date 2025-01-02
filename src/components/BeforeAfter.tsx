@@ -30,7 +30,7 @@ export default function BeforeAfter({
           <div className="h-5"></div>
         </>
       )}
-      <div className={cn('mb-10 flex flex-col gap-5 sm:flex-row', className)}>
+      <div className={cn('mb-12 flex flex-col gap-5 sm:flex-row', className)}>
         <div className="w-full md:w-1/2">
           <p className="!mt-0 text-center">Before</p>
           <Image
