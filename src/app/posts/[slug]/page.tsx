@@ -1,4 +1,5 @@
 import BeforeAfter from '@/components/BeforeAfter'
+import HoverPopover from '@/components/HoverPopover'
 import { WEBSITE_HOST_URL } from '@/lib/constants'
 import { allPosts } from 'contentlayer/generated'
 import { format, parseISO } from 'date-fns'
@@ -53,6 +54,7 @@ const mdxComponents: MDXComponents = {
   a: ({ href, children }) => <Link href={href as string}>{children}</Link>,
   Image: (props) => <NextImage className="rounded-lg" {...props} />,
   BeforeAfter: (props) => <BeforeAfter {...props} />,
+  HoverPopover: (props) => <HoverPopover {...props} />,
 }
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {

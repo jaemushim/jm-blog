@@ -86,15 +86,15 @@
   }
 
   h2 {
-    @apply text-2xl !font-medium tracking-tight;
+    @apply text-2xl !font-medium tracking-tight !text-inherit;
   }
 
   h3 {
-    @apply text-2xl font-semibold tracking-tight;
+    @apply text-xl !font-medium tracking-tight !text-inherit;
   }
 
   h4 {
-    @apply text-xl font-semibold tracking-tight;
+    @apply text-xl font-semibold tracking-tight !text-inherit;
   }
 
   p {
@@ -127,7 +127,7 @@
 }
 
 .prose a {
-  @apply decoration-neutral-400 decoration-[0.1em] underline-offset-2 transition-all dark:decoration-neutral-600;
+  @apply text-inherit decoration-neutral-400 decoration-[0.1em] underline-offset-2 transition-all dark:decoration-neutral-600;
 }
 
 .prose .anchor:after {

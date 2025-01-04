@@ -8,6 +8,7 @@ interface BeforeAfterProps {
   beforeSrc: string
   afterSrc: string
   className?: string
+  layout?: 'horizontal' | 'vertical'
 }
 
 export default function BeforeAfter({
@@ -16,7 +17,10 @@ export default function BeforeAfter({
   beforeSrc,
   afterSrc,
   className,
+  layout = 'horizontal',
 }: BeforeAfterProps) {
+  const isHorizontal = layout === 'horizontal'
+
   return (
     <>
       {title && <p className="!mb-3">• {title}</p>}
@@ -30,8 +34,14 @@ export default function BeforeAfter({
           <div className="h-5"></div>
         </>
       )}
-      <div className={cn('mb-12 flex flex-col gap-5 sm:flex-row', className)}>
-        <div className="w-full md:w-1/2">
+      <div
+        className={cn(
+          'mb-12 flex flex-col gap-5',
+          isHorizontal ? 'sm:flex-row' : 'gap-8',
+          className,
+        )}
+      >
+        <div className={cn('w-full', isHorizontal && 'md:w-1/2')}>
           <p className="!mt-0 text-center">Before</p>
           <Image
             alt=""
@@ -41,7 +51,7 @@ export default function BeforeAfter({
             style={{ height: 'auto', width: '100%' }}
           />
         </div>
-        <div className="w-full md:w-1/2">
+        <div className={cn('w-full', isHorizontal && 'md:w-1/2')}>
           <p className="!mt-0 text-center">After</p>
           <Image
             alt=""
